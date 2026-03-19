@@ -14,7 +14,7 @@ lr = 1e-4
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 
 # We could (probably should) add randomization here, like flipping/rotation
-# Transformers to preprocess data (change to grayscale, resize, make to tensor, normalize)
+# Transforms to preprocess data (change to grayscale, resize, make to tensor, normalize)
 # The normalization is for image net normalization, what it was originally trained on
 train_transform = transforms.Compose([
     transforms.Grayscale(num_output_channels=3),
